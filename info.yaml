@@ -1,0 +1,45 @@
+--- 
+# information
+project: 
+  title: "Chip logo"
+  description: "Chip logo"
+  picture: chip_art.png
+  author: "Jasper"
+  license: LICENSE
+  id: 1
+
+# optional interfaces you want to use: gpio, la1, la2, la3, irq, clk2, wishbone & openram
+interfaces: []
+
+# test within caravel
+caravel_test:
+  recipe: "all" 
+  directory: "dummy_test"
+  id: 1
+  module_name: "chip_art"
+
+# module test
+module_test:
+  recipe: "all" 
+  directory: "dummy_test"
+  makefile: "Makefile"
+
+# run the wrapper formal proof
+wrapper_proof:
+  directory: "."
+  sby: "properties.sby"
+
+# openlane config, used in case I need to re-harden
+openlane:
+  config: "config.tcl"
+
+# source required for various configs and module instantiation
+source:
+  - chip_art.v
+    
+# gds - check nothing on metal 5, DRC & LVS
+final:
+  directory: "final"
+  gds_filename: "gds/chip_art.gds"
+  lvs_filename: "verilog/gl/chip_art.v"
+  lef_filename: "lef/chip_art.lef"
