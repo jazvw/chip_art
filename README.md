@@ -15,5 +15,10 @@ It will create GDS/LEF files in `gds/` folder.
 # Hacking
 Check the `chip_art.py` script for a bunch of stuff that's hardcoded and only tested on sky130 / OpenLANE.
 
+# How does it work?
+It maps supported bitmaps to gray scale images, and the pixel values get then mapped to metal layers in the GDS. The Python script outputs a Magic file, and the Makefile uses Magic to generate GDS and LEF. 
+
+In order to satisfy DRC and LVS, the GDS also contains a power and ground rail!
+
 # Like?
 If you end up using this, send me a tweet at @jzvw and show off your chip art!
