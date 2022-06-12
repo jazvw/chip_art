@@ -7,6 +7,8 @@ project:
   author: "Jasper"
   license: LICENSE
   id: 1
+  waive_module_test: 'waive'
+  waive_caravel: 'waive'
 
 # optional interfaces you want to use: gpio, la1, la2, la3, irq, clk2, wishbone & openram
 interfaces: []
