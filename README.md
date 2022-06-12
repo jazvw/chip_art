@@ -1,8 +1,8 @@
 # Intro
 This tool takes a bitmap, and outputs a GDS and LEF file that can be used in an sky130 / OpenLANE flow. Furthermore, the necessary files are included that allow this to be directly used as a submission for the (excellent) https://www.zerotoasiccourse.com/.
 
-Note: Since we can only use metals 1-4, metal 5 will still have PDN wires going over our art. If someone can solve that, I'm all ears.
-Note2: Depending on your bitmap, you can still cause DRC issues.
+- Note: Since we can only use metals 1-4, metal 5 will still have PDN wires going over our art. If someone can solve that, I'm all ears.
+- Note2: Depending on your bitmap, you can still cause DRC issues. Use caravel's `make precheck` to figure them out. I've seen BEOL checks fail because of  pixels that diagonally 'touch corners' but are otherwise unconnected, so make sure to avoid those in your input image.
 
 # Installation
 You'll need to have the Magic VLSI tool installed and configured properly.
