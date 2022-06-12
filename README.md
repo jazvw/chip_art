@@ -5,7 +5,7 @@ This tool takes a bitmap, and outputs a GDS and LEF file that can be used in an 
 - Note2: Depending on your bitmap, you can still cause DRC issues. Use caravel's `make precheck` to figure them out. I've seen BEOL checks fail because of  pixels that diagonally 'touch corners' but are otherwise unconnected, so make sure to avoid those in your input image.
 
 # Installation
-You'll need to have the Magic VLSI tool installed and configured properly.
+You'll need to have the Magic VLSI tool installed. I've tested it within OpenLANE (https://github.com/The-OpenROAD-Project/OpenLane) docker (run `make mount`).
 
 # Running
 `make clean && make GDS_WIDTH=50 IMAGE=chip_art.png`
