@@ -13,6 +13,13 @@ project:
 # optional interfaces you want to use: gpio, la1, la2, la3, irq, clk2, wishbone & openram
 interfaces: []
 
+# Avoid routing over art!
+obstruction:
+  met1:
+  met2:
+  met3:
+  met4:
+
 # test within caravel
 caravel_test:
   recipe: "all" 
