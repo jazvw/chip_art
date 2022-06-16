@@ -34,7 +34,7 @@ MIN_METAL = 0 # "metal0" means no pixel is drawn
 MAX_METAL = 4 # max metal layer
 
 MAGIC_LAMBDA = 0.01 # this is size of each unit in Magic coordinates in um
-MIN_PIXEL_SIZE = 0.2 # Safety measure, make sure pixels are at least this size
+MIN_PIXEL_SIZE = 1.0 # Safety measure, make sure pixels are at least this size in um
 MIN_HEIGHT = 220 # Minimum height in um so PDN stays happy
 
 PIN_WIDTH = 1.75 # in um
